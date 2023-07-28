@@ -1,0 +1,5 @@
+root.left.left = TreeNode(1)
+# root.left.right = TreeNode(5)
+# root.left.right.left = TreeNode(3)
+# root.left.right.right = TreeNode(6)
+# root.left.right.left.right = TreeNode(4)
