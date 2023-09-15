@@ -7,7 +7,7 @@ class solution:
         if n < m:
             return -1
 
-        minDiff = arr[m - 1] - arr[0]
+        minDiff = float("inf")
 
         for idx in range(len(arr) - m + 1):
             minDiff = min(minDiff, arr[idx + m - 1] - arr[idx])

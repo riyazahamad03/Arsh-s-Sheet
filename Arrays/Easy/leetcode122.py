@@ -1,12 +1,14 @@
-class solution:
-    def maxProfit(self, prices: list[int]):
-        profit = 0
-        for i in range(1, len(prices)):
-            if prices[i] > prices[i - 1]:
-                profit += (prices[i] - prices[i - 1])
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        r, l = 1, 0
+        res = 0
+        while r < len(prices):
+            if prices[r] > prices[l]:
+                res += prices[r] - prices[l]
+            l += 1
+            r += 1
+        return res
 
-        return profit
 
-
-x = solution()
-print(x.maxProfit([7, 1, 5, 3, 6, 4]))
+x = Solution()
+print(x.maxProfit([7, 1, 5, 3, 2, 7]))
